@@ -1,0 +1,20 @@
+body {
+  background-color: yellow;
+  width: 100vw;
+}
+
+section {
+  color: red;
+}
+
+header {
+  color: grey;
+}
+
+div {
+  width: 70vw;
+  height: 60vh;
+  color: green;
+}
+
+/*# sourceMappingURL=main.css.map */

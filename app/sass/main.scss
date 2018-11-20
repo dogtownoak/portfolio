@@ -1,0 +1,17 @@
+@import 'variables';
+
+
+body {
+    background-color: yellow;
+    width: 100vw;
+}
+
+@import 'secondTest';
+
+@import 'thirdTest';
+
+div {
+    width: 70vw;
+    height: 60vh;
+    color: $primary-color;
+}
