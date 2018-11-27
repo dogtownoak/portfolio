@@ -1,20 +1,276 @@
+* {
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+
+.about, #portfolioCarousel, #testimonials, #contactForm {
+  margin: 20vh 2vw;
+}
+
 body {
-  background-color: yellow;
+  background-color: grey;
+  margin: 0;
+  width: 100vw;
+  height: auto;
+}
+
+#header {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-image: url(/public/assets/header3.png);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+h1 {
+  position: absolute;
+  padding: 1em 2em;
+  font-size: 3em;
+  color: #fbfcfb;
+  text-shadow: #f0bebd 0.04em 0.02em 0.01em;
+}
+
+.spaceForParallax {
+  width: 100vw;
+  height: 70vh;
+}
+
+#nav {
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  background-color: black;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  line-height: 2em;
+  background-color: black;
+  font-weight: 900;
+  color: white;
+}
+
+li {
+  display: block;
+  width: auto;
+  font-size: 1.75em;
+  font-weight: 900;
+  overflow: hidden;
+  justify-content: center;
+  align-self: center;
+  background: black;
+}
+
+a, #burger {
+  justify-content: center;
+  align-self: center;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+
+label {
+  font-size: 2em;
+  line-height: 2em;
+  color: white;
+  justify-content: center;
+  align-self: center;
+  margin: 0;
+}
+
+#burger, label {
+  display: none;
+}
+
+li:hover a {
+  color: white;
+}
+
+li:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 0.6s;
+  text-decoration: none;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
   width: 100vw;
 }
 
-section {
-  color: red;
+.highLight {
+  color: #e6a29b;
 }
 
-header {
-  color: grey;
+.sticky + main {
+  padding-top: 80px;
 }
 
-div {
-  width: 70vw;
-  height: 60vh;
-  color: green;
+main {
+  width: 100vw;
+  height: auto;
+  padding: 0px;
+}
+
+#about {
+  display: flex;
+  padding: 20vh 15vw;
+}
+#about h2 {
+  align-self: flex-start;
+  font-size: 2em;
+  color: #fbfcfb;
+  text-shadow: #f0bebd 0.04em 0.02em 0.01em;
+  width: auto;
+}
+#about p {
+  align-self: flex-end;
+  width: 30vw;
+  height: auto;
+  padding: 2em;
+}
+
+.portfolioCarousel {
+  width: 50vw;
+  height: auto;
+}
+
+.portfolioToggle {
+  background-color: black;
+}
+
+.carousel-item {
+  height: 80vh;
+  width: auto;
+}
+
+#testimonials {
+  background-image: url(/public/assets/graf2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: auto;
+  min-height: 768px;
+  width: 100vw;
+  display: flex;
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: auto;
+  width: 50vw;
+  border-radius: 3%;
+  padding: 4vh 6vw;
+}
+article img {
+  width: 30vw;
+  max-width: 337px;
+  height: auto;
+}
+article p {
+  margin: 1em 0 0 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  padding: 0.25em;
+}
+
+.hidden {
+  display: none;
+}
+
+#lightBox {
+  height: 100vh;
+  width: 100vw;
+}
+
+#contactForm {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+form {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-image: url(/public/assets/sf4.jpeg);
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  width: 100vw;
+  height: 20vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  color: white;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 400px) {
+  #burger, label {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .navItem {
+    display: none;
+  }
+
+  #nav {
+    justify-content: flex-start;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  #about p {
+    width: 60vw;
+    height: auto;
+    padding: 1vh 1vw;
+  }
+  #about h2 {
+    width: 40vw;
+    height: auto;
+    padding: 1vh 1vw;
+  }
+
+  body, header, main, section, article, footer {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
