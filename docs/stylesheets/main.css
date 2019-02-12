@@ -7,12 +7,23 @@
   margin: 20vh 2vw;
 }
 
-body {
-  background-color: grey;
-  margin: 0;
+.wrapper {
   width: 100vw;
   height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
+body, html {
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+}
+
 
 #header {
   width: 100vw;
@@ -55,7 +66,7 @@ h1 {
   color: white;
 }
 
-li {
+.navItem {
   display: block;
   width: auto;
   font-size: 1.75em;
@@ -66,7 +77,7 @@ li {
   background: black;
 }
 
-a, #burger {
+a {
   justify-content: center;
   align-self: center;
   color: white;
@@ -83,15 +94,15 @@ label {
   margin: 0;
 }
 
-#burger, label {
+#burger {
   display: none;
 }
 
-li:hover a {
+.navItem:hover a {
   color: white;
 }
 
-li:after {
+.navItem:after {
   content: "";
   display: block;
   width: 0;
@@ -101,7 +112,7 @@ li:after {
   text-decoration: none;
 }
 
-li:hover::after {
+.navItem:hover::after {
   width: 100%;
 }
 
@@ -233,11 +244,10 @@ h4 {
   font-size: 1em;
 }
 
-@media screen and (max-width: 400px) {
-  #burger, label {
+/* @media screen and (max-width: 600px) {
+  #burger {
     display: flex;
-    justify-content: center;
-    align-self: center;
+
   }
 
   .navItem {
@@ -271,6 +281,132 @@ h4 {
     width: 100vw;
     height: auto;
   }
+} */
+
+
+/* Ham */
+/* menu */
+.header {
+  background-color: black;
 }
 
-/*# sourceMappingURL=main.css.map */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 32px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 12px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -12px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ #nav {
+  min-height: 300px;
+
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+
+
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header #nav {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 47em) {
+  #nav {
+    width: 100vw;
+    height: auto;
+    overflow: visible;
+    /* visable */
+    background-color: black;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-content: initial;
+    flex-wrap: nowrap;
+    list-style: none;
+    line-height: 2em;
+    background-color: black;
+    font-weight: 900;
+    color: white;
+  }
+
+  .navItem {
+    align-self: flex-start; 
+  }
+}
+
+

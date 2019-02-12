@@ -5,17 +5,36 @@ $(document).ready(function(){
 // Sticky Nav Bar
 window.onscroll = function(){
     stickyFunction()
+    stickyHamFunction()
 };
 
 var nav = document.getElementById("nav");
 var sticky = nav.offsetTop;
 function stickyFunction(){
-    if(window.pageYOffset >= sticky) {
+    let checked = document.getElementById('menu-btn').checked
+    if(window.pageYOffset >= sticky && checked === false) {
         nav.classList.add("sticky");
     } else {
         nav.classList.remove("sticky");
     }
 };
+
+var navHam = document.getElementById("navHam");
+var stickyHam = navHam.offsetTop;
+function stickyHamFunction(){
+    if(window.pageYOffset >= stickyHam) {
+        navHam.classList.add("sticky");
+    } else {
+        navHam.classList.remove("sticky");
+    }
+};
+
+////////// remove sticky nav when ham is clicked ///////////////
+
+$('.menu-icon').on('click', function() {
+    document.getElementById("nav").classList.remove("sticky")
+})
+
 
 ////////////////////// smooth scrolling ////////////////////////
 var scrollLink = $('.scroll');
@@ -41,6 +60,16 @@ $(window).scroll(function(){
             $(this).parent().siblings().children().removeClass('highLight');
         }
     })
+})
+
+//////////////// hide hamburger menu after scroll  ///////////////
+
+$('.navItem').on('click', function(){
+    console.log("you clicked me")
+    let hideMenu = function() {
+    $('.menu-btn').prop("checked", false)
+    }
+    setTimeout(hideMenu, 1500)
 })
 
 ////////// quotes fade in and out ////////////////////////////////
