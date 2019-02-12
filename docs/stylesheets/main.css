@@ -18,7 +18,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-position: center;
-  background-image: url(/public/assets/header3.png);
+  background-image: url(../assets/header3.png);
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -158,7 +158,7 @@ main {
 }
 
 #testimonials {
-  background-image: url(/public/assets/graf2.jpg);
+  background-image: url(../assets/graf2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: auto;
@@ -211,7 +211,7 @@ form {
   width: 100vw;
   height: 100vh;
   background-position: center;
-  background-image: url(/public/assets/sf4.jpeg);
+  background-image: url(../assets/sf4.jpeg);
   background-repeat: no-repeat;
   position: relative;
   display: flex;
