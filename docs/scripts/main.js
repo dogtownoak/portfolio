@@ -42,7 +42,7 @@ var scrollLink = $('.scroll');
 scrollLink.on('click', function(e){
     e.preventDefault();
     $('body,html').animate({
-        scrollTop: $(this.hash).offset().top -10
+        scrollTop: $(this.hash).offset().top
     }, 1000)
 })
 
@@ -54,7 +54,7 @@ $(window).scroll(function(){
         var sectionOffSet = $(this.hash).offset().top;
         console.log(`${sectionOffSet} sectionOffSet`);
         console.log(`${scrollBarLocation} scrollBarLocation`);
-        if (sectionOffSet <= scrollBarLocation +60) {
+        if (sectionOffSet <= scrollBarLocation +10) {
             console.log($(this));
             $(this).addClass('highLight')
             $(this).parent().siblings().children().removeClass('highLight');
@@ -108,6 +108,32 @@ $('#portfolioCarousel').on('click', function(){
 
 //////////////////burger /////////////////////////////
 
+// parallax
+
+// $('.parallax-window').parallax({imageSrc: '/docs/assets/graf2.jpg', speed: '1'})
+let image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image, {
+    orientation: 'left',
+    delay: .8
+});
+
+let imageTwo = document.getElementsByClassName('thumbnailTwo');
+new simpleParallax(imageTwo, {
+    orientation: 'right',
+    delay: .8
+});
+
+// 
+$("#headshotLookUp").on({
+    mouseenter: function(){
+        console.log("mouseenter")
+        $(this).attr("src", 'docs/assets/headshot724X543.jpg');
+    },
+    mouseleave: function(){
+        console.log("mouseleave")
+        $(this).attr("src",'docs/assets/vegas724X543.jpg')
+    }
+})
 
 
 

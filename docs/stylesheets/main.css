@@ -3,7 +3,7 @@
   font-family: "Muli", sans-serif;
 }
 
-.about, #portfolioCarousel, #testimonials, #contactForm {
+.about, #portfolioCarousel, #contactForm {
   margin: 20vh 2vw;
 }
 
@@ -41,20 +41,21 @@ h1 {
   padding: 1em 2em;
   font-size: 3em;
   color: #fbfcfb;
-  text-shadow: #f0bebd 0.04em 0.02em 0.01em;
+  text-shadow: #f0bebd 0.04em 0.02em 0.08em;
 }
 
 .spaceForParallax {
   width: 100vw;
-  height: 70vh;
+  height: auto;
 }
 
 #nav {
   width: 100vw;
   height: 10vh;
+  margin: 0;
   overflow: hidden;
   background-color: black;
-  z-index: 2000;
+  z-index: 99999999 !important;
   display: flex;
   justify-content: space-evenly;
   align-content: space-evenly;
@@ -64,6 +65,7 @@ h1 {
   background-color: black;
   font-weight: 900;
   color: white;
+
 }
 
 .navItem {
@@ -138,18 +140,30 @@ main {
 
 #about {
   display: flex;
+  flex-direction: column;
   padding: 20vh 15vw;
 }
 #about h2 {
   align-self: flex-start;
   font-size: 2em;
   color: #fbfcfb;
-  text-shadow: #f0bebd 0.04em 0.02em 0.01em;
-  width: auto;
+  text-shadow: #f0bebd 0.08em 0.04em 0.08em;
 }
+
+#headshot {
+  align-self: flex-start;
+  border-radius: 50%;
+}
+
+#headshotLookUp {
+  border-radius: 5px;
+}
+
+
+
 #about p {
   align-self: flex-end;
-  width: 30vw;
+  width: 60vw;
   height: auto;
   padding: 2em;
 }
@@ -212,11 +226,23 @@ article p {
   margin: 0;
 }
 
-form {
+/* MailChimp form */
+#mc_embed_signup {
   position: absolute;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font: .5em Helvetica, Arial, sans-serif;
+  min-width: 20vw;
+  border-radius: 10px;
 }
+
+#mc-embedded-subscribe {
+  background-color: #549499 !important;
+}
+
+
+
+
 
 #particles-js {
   width: 100vw;
@@ -243,45 +269,6 @@ h4 {
   color: white;
   font-size: 1em;
 }
-
-/* @media screen and (max-width: 600px) {
-  #burger {
-    display: flex;
-
-  }
-
-  .navItem {
-    display: none;
-  }
-
-  #nav {
-    justify-content: flex-start;
-  }
-
-  #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  #about p {
-    width: 60vw;
-    height: auto;
-    padding: 1vh 1vw;
-  }
-  #about h2 {
-    width: 40vw;
-    height: auto;
-    padding: 1vh 1vw;
-  }
-
-  body, header, main, section, article, footer {
-    width: 100vw;
-    height: auto;
-  }
-} */
 
 
 /* Ham */
@@ -313,7 +300,7 @@ h4 {
   height: 4px;
   position: relative;
   transition: background .2s ease-out;
-  width: 32px;
+  width: 35px;
 }
 
 .header .menu-icon .navicon:before,
@@ -363,6 +350,49 @@ h4 {
   top: 0;
 }
 
+.projectSummaryWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.projectSummary {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.white {
+  width: 100vw;
+  height: 30vh;
+  background-color: black;
+}
+
+.grey {
+  width: 100vw;
+  height: 30vh;
+  background-color: grey;
+}
+
+.clearBlock {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.thumbnail, .thumbnailTwo {
+  width: 30vw;
+  z-index: -9999 !important;
+
+}
+
+
+
 /* 48em = 768px */
 
 @media (min-width: 48em) {
@@ -406,6 +436,37 @@ h4 {
 
   .navItem {
     align-self: flex-start; 
+  }
+
+  #about p {
+    align-self: center;
+    width: 80vw;
+    height: auto;
+    padding: 0;
+
+  }
+
+  .projectSummary {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  .thumbnail, .thumbnailTwo {
+    width: 80vw;
+    z-index: -9999 !important;
+  
+  }
+
+  #mc_embed_signup {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font: .5em Helvetica, Arial, sans-serif;
+    min-width: 80vw;
+    border-radius: 10px;
   }
 }
 
