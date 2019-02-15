@@ -113,15 +113,17 @@ $('#portfolioCarousel').on('click', function(){
 // $('.parallax-window').parallax({imageSrc: '/docs/assets/graf2.jpg', speed: '1'})
 let image = document.getElementsByClassName('thumbnail');
 new simpleParallax(image, {
-    orientation: 'left',
-    delay: .8
+    orientation: 'right',
+    delay: 2.8
 });
 
 let imageTwo = document.getElementsByClassName('thumbnailTwo');
 new simpleParallax(imageTwo, {
-    orientation: 'right',
-    delay: .8
+    orientation: 'left',
+    delay: 2.8
 });
+
+
 
 // 
 $("#headshotLookUp").on({
@@ -132,6 +134,17 @@ $("#headshotLookUp").on({
     mouseleave: function(){
         console.log("mouseleave")
         $(this).attr("src",'docs/assets/vegas724X543.jpg')
+    }
+})
+
+$("#headshot").on({
+    mouseenter: function(){
+        console.log("mouseenter")
+        $(this).attr("src", 'docs/assets/vegas543X543cropfromtop.jpg');
+    },
+    mouseleave: function(){
+        console.log("mouseleave")
+        $(this).attr("src",'docs/assets/squareHeadshot.jpg')
     }
 })
 

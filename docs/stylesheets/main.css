@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: "Muli", sans-serif;
+  /* font-family: "Muli", sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about, #portfolioCarousel, #contactForm {
@@ -159,6 +160,24 @@ main {
   border-radius: 5px;
 }
 
+#resume {
+  width: 136px;
+  border-radius: 8px;
+  padding: .6em;
+  margin: 0 0 3em 0;
+  background-color: #549499;
+  color: white;
+  /* text-shadow: #f0bebd 0.08em 0.04em 0.08em; */
+  /* font-family: 'Montserrat', sans-serif; */
+  font-weight: 600;
+  border: none;
+
+}
+
+.resume {
+  align-self: flex-end;
+  margin: 0 4em 0 0;
+}
 
 
 #about p {
@@ -356,7 +375,7 @@ h4 {
 }
 
 .projectSummary {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,7 +405,7 @@ h4 {
 }
 
 .thumbnail, .thumbnailTwo {
-  width: 30vw;
+  width: 40vw;
   z-index: -9999 !important;
 
 }
@@ -421,7 +440,7 @@ h4 {
     overflow: visible;
     /* visable */
     background-color: black;
-    z-index: 2000;
+    z-index: 99999 !important;
     display: flex;
     flex-direction: column;
     justify-content: initial;
@@ -448,11 +467,19 @@ h4 {
 
   .projectSummary {
     width: 80vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
   }
+
+  .projectSummaryWrapper {
+    width: 100vw;
+    height: auto;
+    background-color: black;
+  }
+
 
   .thumbnail, .thumbnailTwo {
     width: 80vw;
