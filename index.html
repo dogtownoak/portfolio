@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="docs/stylesheets/main.css">
+    <link rel="stylesheet" href="docs/stylesheets/hover-min.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <script src="docs/scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="docs/scripts/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js" defer></script>
+  
     <title>david brandon ford</title>
 </head>
   <body>
+    <div class="wrapper">
     <header>
       <div id='header'>
         <h1>brandon ford</h1>
       </div>
-      <nav>  
-        <ul id="nav">
-          <li id="burger" class="navItem 0">
-            <label for="toggle">&#9776;</label>
-          </li>
+      <nav id="navHam" class="header">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul id="nav" class="menu">
+
           <li class="navItem 1">
             <a class="navLink scroll" href="#about">About</a>
           </li>
           <li class="navItem 2">
-            <a class="navLink scroll" href="#portfolioCarousel">Portfolio</a>
+            <a class="navLink scroll" href="#portfolio">Portfolio</a>
           </li>
           <li class="navItem 3">
             <a class="navLink scroll" href="#testimonials">Quotes</a>
@@ -35,20 +41,98 @@
             <a class="navLink scroll" href="#contactForm">Contact</a>
           </li>
         </ul>
+
+        
       </nav>
     </header>
     <main>
       <section id="about">
-        <h2>About Me</h2>
-        <p>Echo Park Marfa art party squid Wes Anderson cray keytar 3 wolf moon yr trust fund hashtag sustainable Intelligentsia Tonx Austin Vice American Apparel pickled whatever selvage High Life bitters heirloom vinyl street art mustache pork belly literally cred deep v PBR master cleanse bespoke direct trade  aesthetic cliche locavore cornhole kitsch Thundercats selfies hella chillwave keffiyeh lo-fi 8-bit fap church-key Cosby sweater pour-over vegan irony lomo authentic pop-up quinoa stumptown 90's wolf semiotics four loko Brooklyn artisan craft beer scenester wayfarers salvia tattooed typewriter skateboard biodiesel Helvetica tofu fanny pack Banksy twee narwhal synth fingerstache readymade polaroid occupy Truffaut post-ironic umami Kickstarter next level mumblecore VHS PBR&B</p>
-        <p>roof party sartorial paleo letterpress small batch leggings shabby chic gluten-free banjo Portland Williamsburg food truck kogi gastropub crucifix try-hard Neutra flannel disrupt normcore messenger bag tote bag seitan slow-carb Tumblr tousled chambray swag jean shorts Odd Future you probably haven't heard of them brunch chia Carles retro Pitchfork meggings mlkshk iPhone hoodie flexitarian freegan cardigan DIY McSweeney's plaid asymmetrical +1 mixtape single-origin coffee farm-to-table pug viral banh mi photo booth actually put a bird on it ugh raw denim Godard meh blog drinking vinegar fashion axe kale chips Blue Bottle ethical YOLO ennui XOXO fixie bicycle rights Schlitz forage distillery Pinterest Bushwick beard organic sriracha Shoreditch Etsy before they sold out butcher dreamcatcher gentrify</p>
+        <h2>Welcome to my portfolio.</br> -Brandon</h2></br>
+        <p><span>
+            <img id="headshot" src="docs/assets/squareHeadShot.jpg" heigth="150" width="150"></span> Hello, my name is Brandon Ford and this is my portfolio website.  I’m a full stack web developer located in the San Francisco Bay Area.</br></br>
+
+            I’ve always been goal oriented and passionate about helping people.  Once upon a time I pursued this as an emergency medical technician in San Francisco and Marin.  My experiences there led me into helping seniors over 62 achieve financial freedom.  I spent 10 years in the financial services industry with one company managing the sales, marketing and operations. Along the road to achieving my goal of becoming the #1 broker in the US I sourced, developed, and implemented many technologies.   This is how discovered my love for programming.</br></br>
+            
+            The development and implementation of business enhancing software required extensive research, constant learning and the management of software development teams.  I know the pains and joys of both implementing and using platform solutions such as Salesforce CRM and building your own solution from the ground up on a mySQL database.</br></br>
+            
+            Feel free to explore, download my resume to learn more or fill out the contact form below.  Thanks for stopping by.
+            </p><span class="resume"><a id="resume" class="hvr-float-shadow button" href="docs/assets/Ford, Brandon Resume.pdf">Download My Resume</a></br>
+              <img id="headshotLookUp" src="docs/assets/vegas724X543.jpg" width="136" height="181"></span>
       </section>
-      <secttion class="spaceForParallax">
-        <div class="spaceForParallax">
-        </div>
-      </secttion>
-      <section id="portfolioCarousel">
-          <!-- <h2>Projects</h2> -->
+      
+      <section id="portfolio" class="spaceForParallax">
+          <div class="white"></div>
+          <div class="clearBlock">  
+            <img class="thumbnail" src="docs/assets/projects-imac-macbook-pro-ipad-mini-and-iphone-mockup-over-a-png-background-a11876.png" alt="image" >
+          </div>
+          <div class="white projectSummaryWrapper">
+            <div class="projectSummary">
+              <h3>Projects</h3>
+              <p>Below are three of my latest projects</p>
+              <ul>
+                <li><a href="#">CleanMyBnb</a></li>
+                <li><a href="#">YourTube Analyzed</a></li>
+                <li><a href="#">AppyHour</a></li>
+              </ul>
+            </div>
+          </div>
+      </section>
+      <!-- <section>
+        <div class="grey"></div>
+      </section> -->
+      <section class="spaceForParallax">
+          <div class="white"></div>
+          <div class="clearBlock">  
+            <img class="thumbnailTwo" src="docs/assets/cleanmybnb-girl-using-iphone-6-and-imac-at-office.png" alt="image">
+          </div>
+          <div class="white projectSummaryWrapper">
+              <div class="projectSummary">
+                  <h3>CleanMyBnb</h3>
+                  <p>CleanMyBnb matches Airbnb hosts with cleaners.  Airbnb units must be cleaned when guests checkout and this automates the process.  Hosts can find a reasonably priced cleaner without the scheduling work.  Cleaners fill their schedules with a large pipeline of back to back appointments.</p>
+                  <a href="https://gentle-fjord-24826.herokuapp.com/">View Project</a>
+                  <a href="https://github.com/dogtownoak/cleanmybnb/blob/master/README.md">View Read Me</a>
+              </div>
+          </div>
+      </section>
+      <!-- <section>
+          <div class="grey"></div>
+        </section> -->
+        <section class="spaceForParallax">
+            <div class="white"></div>
+            <div class="clearBlock">  
+              <img class="thumbnailTwo" src="docs/assets/yourtubeanalyzed-young-man-working-on-his-macbook-pro-laptop-and-iphone-6-mockup.png" alt="image">
+            </div>
+            <div class="white projectSummaryWrapper">
+                <div class="projectSummary">
+                    <h3>YourTube Analyzed</h3>
+                    <p>An application that uses machine learning sentiment analysis on your YouTube viewing history.   Create a profile on our Web Application. Like and dislike trending YouTube content. Have your profile analyzed by IBM supercomputer, Watson. See that data graphically displayed in Google Charts.</p>
+                    <a href="https://yourtube-analyzed.herokuapp.com/">View Project</a>
+                    <a href="https://github.com/dogtownoak/project_02/blob/master/README.md">View Read Me</a>
+                </div>
+            </div>
+        </section>
+        <!-- <section>
+            <div class="grey"></div>
+          </section> -->
+          <section class="spaceForParallax">
+              <div class="white"></div>
+              <div class="clearBlock">  
+                <img class="thumbnailTwo" src="docs/assets/appyhour-celebrating-with-iphone-6-and-htc.png" alt="image">
+              </div>
+              <div class="white projectSummaryWrapper ">
+                  <div class="projectSummary">
+                      <h3>AppyHour</h3>
+                      <p>A web application that lets a user select a drink or appetizer "deal of the day", to be redeemed the following day.  It assists users to locate optimum deals and drives new guests to businesses.</p>
+                      <a href="https://immense-waters-91777.herokuapp.com/">View Project</a>
+                      <a href="https://github.com/dogtownoak/project-01/blob/master/README.md">View Read Me</a>
+                  </div>
+              </div>
+          </section>
+          <section>
+              <div class="grey"></div>
+            </section>
+
+      <!-- <section id="portfolioCarousel">
           <div id="portfolio" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#portfolioCarousel" data-slide-to="0" class="active"></li>
@@ -87,32 +171,11 @@
                   <span class="sr-only">Next</span>
               </a>
             </div>
-      </section>
-      <!-- <section id="lightBox">
-          <div class="modal" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="false">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
       </section> -->
-      <secttion class="spaceForParallax">
+      <section class="spaceForParallax">
           <div class="spaceForParallax">
           </div>
-      </secttion>
+      </section>
       <section id="testimonials">
         <article class="testimonial testimonialOne hidden">
           <h3>TestimonialOne</h1>
@@ -130,13 +193,64 @@
           <p>cornhole small batch ennui sriracha polaroid hella cardigan photo booth stumptown cred flexitarian quinoa Brooklyn readymade master cleanse Tumblr craft beer ugh post-ironic pug +1 YOLO before they sold out Pinterest Truffaut salvia 8-bit squid Banksy XOXO next level bespoke sustainable occupy vegan deep v distillery typewriter swag McSweeney's PBR Wes Anderson crucifix Intelligentsia yr selvage bicycle rights asymmetrical tofu Bushwick messenger bag biodiesel synth plaid literally hoodie dreamcatcher cliche tousled shabby chic mlkshk lo-fi Helvetica street art chia chambray meh Odd Future Blue Bottle retro four loko </p>
         </article>
       </section>
-      <secttion class="spaceForParallax">
+      <section>
+          <div class="grey"></div>
+        </section>
+      <section class="spaceForParallax">
           <div class="spaceForParallax">
           </div>
-      </secttion>
+      </section>
       <section id="contactForm">
-        <div id='particles-js'">    
-        <form id="form" action="#" method="#">
+        <div id='particles-js'"> 
+          
+          
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://COM.us16.list-manage.com/subscribe/post?u=3398a0ad646b55bcd1be0a25f&amp;id=80366a8a44" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Subscribe to our mailing list</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group ">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+</div>
+<div class="mc-field-group ">
+    <label for="mce-PHONE">Phone Number </label>
+    <input type="text" name="PHONE" class="" value="" id="mce-PHONE" placeholder="Phone">
+  </div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">First Name </label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+</div>
+<div class="mc-field-group">
+	<label for="mce-LNAME">Last Name </label>
+	<input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+</div>
+
+<div class="mc-field-group">
+	<label for="mce-MMERGE5">Message </label>
+	<input type="text" value="" name="MMERGE5" class="" id="mce-MMERGE5">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3398a0ad646b55bcd1be0a25f_80366a8a44" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+
+
+
+
+
+        <!-- <form id="form" action="#" method="#">
           <h2>Contact Me</h2>
           <div class="name">
             <label for="name">Name:</label><br>
@@ -155,7 +269,7 @@
             <textarea rows="4" cols="50" name="message" form="form" placeholder="Message"></textarea>
           </div>
           <input type="submit" value="SEND">
-        </form>
+        </form> -->
         </div>
       </section>
       <section>
@@ -175,9 +289,9 @@
     console.log("particles.js config loaded");
   });
 </script>
+</div>
 </body>
+
 </html>
 
-
-<!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@_pngdesign?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from PNG Design"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">PNG Design</span></a> -->
 
