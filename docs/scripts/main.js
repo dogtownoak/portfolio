@@ -1,7 +1,6 @@
 $(document).ready(function(){
     console.log('JS up and running');
 
-
 // Sticky Nav Bar
 window.onscroll = function(){
     stickyFunction()
@@ -72,36 +71,6 @@ $('.navItem').on('click', function(){
     setTimeout(hideMenu, 1500)
 })
 
-////////// quotes fade in and out ////////////////////////////////
-var testimonialFadeInOut = function(){
-    var testimonials = $('.testimonial');
-    console.log(testimonials);
-    var testimonialsIndex = -1;
-
-    function showNextTestimonial() {
-        ++testimonialsIndex;
-        testimonials.eq(testimonialsIndex % testimonials.length)
-            .fadeIn(2000)
-            .delay(6000)
-            .fadeOut(600, showNextTestimonial);
-    }
-    showNextTestimonial();
-}
-testimonialFadeInOut();
-
-////////////lightbox ///////////////////////////////////////////////
-
-// $('#lightBox').modal('show');
-
-
-
-// $('.carousel').on('click',function(e){
-//     $('.modal').modal('show');
-//     console.log(e.target);
-//     var pic = e.target
-//     $('.modal-body').append(pic);
-// });
-
 $('#portfolioCarousel').on('click', function(){
     $('body').toggleClass('portfolioToggle');
 });
@@ -122,8 +91,6 @@ new simpleParallax(imageTwo, {
     orientation: 'left',
     delay: 2.8
 });
-
-
 
 // 
 $("#headshotLookUp").on({
@@ -147,9 +114,5 @@ $("#headshot").on({
         $(this).attr("src",'docs/assets/squareHeadshot.jpg')
     }
 })
-
-
-
-
 
 });
