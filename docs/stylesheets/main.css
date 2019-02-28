@@ -4,7 +4,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.about, #portfolioCarousel, #contactForm {
+.about,
+#portfolioCarousel,
+#contactForm {
   margin: 20vh 2vw;
 }
 
@@ -16,7 +18,8 @@
   overflow-x: hidden;
 }
 
-body, html {
+body,
+html {
   background-color: grey;
   margin: 0;
   padding: 0;
@@ -129,7 +132,7 @@ label {
   color: #e6a29b;
 }
 
-.sticky + main {
+.sticky+main {
   padding-top: 80px;
 }
 
@@ -144,6 +147,7 @@ main {
   flex-direction: column;
   padding: 20vh 15vw;
 }
+
 #about h2 {
   align-self: flex-start;
   font-size: 2em;
@@ -194,11 +198,13 @@ article {
   border-radius: 3%;
   padding: 4vh 6vw;
 }
+
 article img {
   width: 30vw;
   max-width: 337px;
   height: auto;
 }
+
 article p {
   margin: 1em 0 0 0;
   background-color: rgba(255, 255, 255, 0.5);
@@ -326,25 +332,25 @@ h4 {
   display: none;
 }
 
-.header .menu-btn:checked ~ #nav {
+.header .menu-btn:checked~#nav {
   min-height: 300px;
 
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-btn:checked~.menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-btn:checked~.menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-btn:checked~.menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -383,7 +389,8 @@ h4 {
 
 }
 
-.thumbnail, .thumbnailTwo {
+.thumbnail,
+.thumbnailTwo {
   width: 40vw;
   z-index: -9999 !important;
 
@@ -399,14 +406,17 @@ h4 {
   .header li {
     float: left;
   }
+
   .header li a {
     padding: 20px 30px;
   }
+
   .header #nav {
     clear: none;
     float: right;
     max-height: none;
   }
+
   .header .menu-icon {
     display: none;
   }
@@ -433,7 +443,7 @@ h4 {
   }
 
   .navItem {
-    align-self: flex-start; 
+    align-self: flex-start;
   }
 
   #about p {
@@ -460,10 +470,11 @@ h4 {
   }
 
 
-  .thumbnail, .thumbnailTwo {
+  .thumbnail,
+  .thumbnailTwo {
     width: 80vw;
     z-index: -9999 !important;
-  
+
   }
 
   #mc_embed_signup {
@@ -475,5 +486,3 @@ h4 {
     border-radius: 10px;
   }
 }
-
-
